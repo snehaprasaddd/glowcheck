@@ -1,8 +1,10 @@
 import streamlit as st
 import requests
 
-# Define the URL of your running FastAPI backend
-API_URL = "http://127.0.0.1:8000/analyze"
+import os
+
+# Get the backend URL from the environment variable, with a fallback for local development
+API_URL = os.environ.get("API_URL", "http://127.0.0.1:8000/analyze")
 
 # --- Streamlit User Interface ---
 
